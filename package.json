@@ -4,6 +4,9 @@
   "private": true,
   "workspaces": [
     "apps/*",
+    "pwa/apps/*",
+    "pwa/packages/*",
+    "pwa/services/*",
     "packages/*",
     "services/*"
   ],
@@ -20,6 +23,14 @@
     "web:customer": "npm run web -w @pumpgoapp/customer",
     "web:station": "npm run web -w @pumpgoapp/station",
     "web:manager": "npm run web -w @pumpgoapp/manager",
+    "pwa:customer:dev": "npm run dev -w @pumpgoapp/pwa-customer",
+    "pwa:station:dev": "npm run dev -w @pumpgoapp/pwa-station",
+    "pwa:manager:dev": "npm run dev -w @pumpgoapp/pwa-manager",
+    "pwa:customer:build": "npm run build -w @pumpgoapp/pwa-customer",
+    "pwa:station:build": "npm run build -w @pumpgoapp/pwa-station",
+    "pwa:manager:build": "npm run build -w @pumpgoapp/pwa-manager",
+    "pwa:api:dev": "npm run dev -w @pumpgoapp/pwa-api",
+    "pwa:api:build": "npm run build -w @pumpgoapp/pwa-api",
     "api:dev": "npm run dev -w @pumpgoapp/api",
     "api:build": "npm run build -w @pumpgoapp/api"
   }
