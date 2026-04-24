@@ -1,22 +1,26 @@
 {
   "name": "pumpgoapp",
   "version": "1.0.0",
-  "main": "index.ts",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "services/*"
+  ],
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
-  },
-  "dependencies": {
-    "expo": "~54.0.33",
-    "expo-status-bar": "~3.0.9",
-    "react": "19.1.0",
-    "react-native": "0.81.5"
-  },
-  "devDependencies": {
-    "@types/react": "~19.1.0",
-    "typescript": "~5.9.2"
-  },
-  "private": true
+    "start:customer": "npm run start -w @pumpgoapp/customer",
+    "start:station": "npm run start -w @pumpgoapp/station",
+    "start:manager": "npm run start -w @pumpgoapp/manager",
+    "android:customer": "npm run android -w @pumpgoapp/customer",
+    "android:station": "npm run android -w @pumpgoapp/station",
+    "android:manager": "npm run android -w @pumpgoapp/manager",
+    "ios:customer": "npm run ios -w @pumpgoapp/customer",
+    "ios:station": "npm run ios -w @pumpgoapp/station",
+    "ios:manager": "npm run ios -w @pumpgoapp/manager",
+    "web:customer": "npm run web -w @pumpgoapp/customer",
+    "web:station": "npm run web -w @pumpgoapp/station",
+    "web:manager": "npm run web -w @pumpgoapp/manager",
+    "api:dev": "npm run dev -w @pumpgoapp/api",
+    "api:build": "npm run build -w @pumpgoapp/api"
+  }
 }
